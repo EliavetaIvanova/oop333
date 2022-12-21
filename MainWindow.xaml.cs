@@ -170,7 +170,7 @@ namespace Editor
                 {
                     Line newEndNearLine = Arrow.patternEndNearLine(newLine);
                     Line newBeginNearLine = Arrow.patternBeginNearLine(newLine);
-                    myArrows.Add(new MyArrowType1(newLine, newEndDistantLine, newBeginDistantLine, newEndNearLine, newBeginNearLine));
+                    myArrows.Add(new Arrow1(newLine, newEndDistantLine, newBeginDistantLine, newEndNearLine, newBeginNearLine));
                     drawPanel.Children.Add(newEndNearLine);
                     drawPanel.Children.Add(newBeginNearLine);
                     Canvas.SetZIndex(newEndNearLine, 0);
@@ -360,7 +360,7 @@ namespace Editor
 
             ToolTip tooltip = new ToolTip();
             Button button = (Button)sender;
-            tooltip.Content = "Сохранение прошло успешно!";
+            tooltip.Content = "Сохранено";
             button.ToolTip = tooltip;
             tooltip.IsOpen = true;
             await Task.Delay(2000);
